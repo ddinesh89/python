@@ -1,4 +1,5 @@
-s = "bobbsoboboboboebobobobotbo"
+# sample s = "bobbsoboboboboebobobobotbo"
+s = str(raw_input("Enter the input string"))
 count = 0;
 iter = 0;
 length = len(s)
