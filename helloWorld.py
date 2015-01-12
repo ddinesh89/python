@@ -1,2 +1,1 @@
-if 6 > 7:
-    print "yep"
+print "Hello World! from python"
