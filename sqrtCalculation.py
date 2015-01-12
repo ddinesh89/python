@@ -1,23 +1,17 @@
-print "Please think of a number between 0 and 100!"
+#newton-rhapson formulae for finding sqrt
+inputNum = float(raw_input("Enter the input number: "))
+negative = False
+if (inputNum < 0):
+    negative = True;
+    inputNum = abs(inputNum)
 epsilon = 0.001
-low = 0
-high = 100
-ans = (low+high)/2
-done = False
-while (not done):
-    print ("")
-    print ("Is your secret number "+str(int(ans))+"?")
-    print ("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly "),
-    userSelection = str(raw_input())
-    if (userSelection == "h"):
-        high = abs(ans)
-        ans = int((low + high)/2)
-    elif (userSelection == "l"):
-        low = abs(ans)
-        ans = int((low + high)/2)
-    elif (userSelection == "c"):
-        done = True
+guess = inputNum/2.0
+while (abs(guess**2 - inputNum) >= epsilon):
+    guess = guess - ((guess**2)-inputNum)/(2*guess)
+if (abs(guess**2 - inputNum) >= epsilon):
+    print "Could not find the square root of "+str(inputNum)
+else:
+    if (negative):
+        print str(guess) +"i is the approximate square root of "+str(inputNum)
     else:
-        print "Sorry, I did not understand your input."
-print "Game over. Your secret number was: "+ str(int(ans))
-    
+        print str(guess) +" is the approximate square root of "+str(inputNum)
