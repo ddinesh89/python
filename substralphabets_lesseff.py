@@ -1,4 +1,5 @@
-s = str(raw_input("Enter the input substring"))
+# less effective approach as it loops over every character
+s = str(raw_input("Enter the input string"))
 length = len(s)
 iterator = 0
 maxsubstr = ""
