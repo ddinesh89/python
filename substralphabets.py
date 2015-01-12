@@ -1,4 +1,4 @@
-s = "abcdefghijklmnopqrstuvwxyz"
+s = str(raw_input("Enter the input string"))
 length = len(s)
 iterator = 0
 maxsubstr = ""
