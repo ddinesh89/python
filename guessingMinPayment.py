@@ -1,5 +1,5 @@
-#balance = 3926
-#annualInterestRate = 0.2
+balance = int(raw_input("Enter the balance amount: "))
+annualInterestRate = float(raw_input("Enter the annual interest rate(eg: 0.2 for 20%): "))
 remainingBal = balance
 monthlyInterestRate = annualInterestRate / 12
 minimumPayment = 10
