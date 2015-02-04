@@ -20,6 +20,7 @@ SCRABBLE_LETTER_VALUES = {
 # Helper code
 # (you don't need to understand this helper code)
 
+#set it to your own location
 WORDLIST_FILENAME = "/Users/ddeiveegan/python/python/scrabble/words.txt"
 
 def loadWords():
