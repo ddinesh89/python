@@ -39,6 +39,22 @@ def x_ian(x, word):
     word: a string
     returns: True if word is x_ian, False otherwise
     """
+    if len(x) == 1 :
+        if x in word :
+            return True
+        else :
+            return False
+    else :
+        if x[0] in word :
+            iter = 0
+            for char in word:
+                if char == x[0] :
+                    break
+                else :
+                    iter += 1
+            return x_ian(x[1:],word[iter:])
+        else :
+            return False
         
 
 #
@@ -55,4 +71,13 @@ def insertNewlines(text, lineLength):
         the next word.
     returns: a string, with newline characters inserted appropriately. 
     """
-    ### TODO.
+    if len(text) <= lineLength :
+        return text
+    else :
+        if text[lineLength+1] == " " : 
+            return text[:lineLength+1] + "\n" + insertNewlines(text[lineLength+2:], lineLength) 
+        else :
+            length = lineLength
+            while text[length+1] != " " :
+                length += 1
+            return text[:length] + "\n" + insertNewlines(text[length+2:], lineLength)
