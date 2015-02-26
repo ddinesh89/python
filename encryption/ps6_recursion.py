@@ -78,6 +78,9 @@ def insertNewlines(text, lineLength):
             return text[:lineLength+1] + "\n" + insertNewlines(text[lineLength+2:], lineLength) 
         else :
             length = lineLength
-            while text[length+1] != " " :
+            while text[length+1] != " " or length <= len(text):
                 length += 1
-            return text[:length] + "\n" + insertNewlines(text[length+2:], lineLength)
+            if length == len(text) :
+                return text
+            else :
+                return text[:length] + "\n" + insertNewlines(text[length+2:], lineLength)
