@@ -40,21 +40,9 @@ def x_ian(x, word):
     returns: True if word is x_ian, False otherwise
     """
     if len(x) == 1 :
-        if x in word :
-            return True
-        else :
-            return False
+        return x in word
     else :
-        if x[0] in word :
-            iter = 0
-            for char in word:
-                if char == x[0] :
-                    break
-                else :
-                    iter += 1
-            return x_ian(x[1:],word[iter:])
-        else :
-            return False
+        return x[0] in word and x_ian(x[1:],word[word.index(x[0]):])
         
 
 #
