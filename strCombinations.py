@@ -29,4 +29,5 @@ def allcombinations() :
         inputStr = rotateStr(inputStr, iterator)
     print results
 
+#call the function to start the program automatically
 allcombinations()
