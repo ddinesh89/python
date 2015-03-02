@@ -277,8 +277,7 @@ def main_thread(master):
         # TODO: Problem 11
         # After implementing makeTrigger, uncomment the line below:
         triggerlist = readTriggerConfig("/Users/dineshdeiveegan/python/feedParser/triggers.txt")
-        print triggerlist
-
+        
         # **** from here down is about drawing ****
         frame = Frame(master)
         frame.pack(side=BOTTOM)
